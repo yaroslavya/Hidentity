@@ -3,14 +3,14 @@
   <Class Name="Hidentity.Web.Filters.InputDataCatcher">
     <Position X="0.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Filters\ParamCatcher.cs</FileName>
+      <HashCode>AAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Filters\InputDataCatcher.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Hidentity.Web.SubstitutableParam">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Filters\SubstitutableParam.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -18,7 +18,7 @@
   <Class Name="Hidentity.Web.DefaultParamCatchingPolicy">
     <Position X="3.25" Y="2.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Filters\DefaultParamCatchingPolicy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -26,21 +26,21 @@
   <Class Name="Hidentity.Web.InputParamData">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>InputParamData.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAABAAAQAAAEAAAAAAA=</HashCode>
+      <FileName>Filters\InputParamData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Hidentity.Web.ISubstitutableParam">
     <Position X="5.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Filters\ISubstitutableParam.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Hidentity.Web.IParamCatchingPolicy">
     <Position X="6" Y="2.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Filters\IParamCatchingPolicy.cs</FileName>
     </TypeIdentifier>
   </Interface>

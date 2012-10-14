@@ -10,7 +10,7 @@ using Hidentity.Web.Filters;
 namespace Hidentity.Test.Filter
 {
     [TestClass]
-    public class InputParamsCatcherTests
+    public class When_catching_input_params
     {
         [TestMethod]
         public void id_input_param_should_be_handled_by_default()
@@ -47,7 +47,7 @@ namespace Hidentity.Test.Filter
             var param = subsParams[0];
 
             //assert
-            Assert.AreEqual("DefaultSubstitutionPolicy", param.HandlingType, "Should be default policy");
+            Assert.AreEqual(param.HandlingType.Name, typeof(DefaultParamCatchingPolicy).Name, "Should point to default if nothing was configured.");
         }
     }
 }

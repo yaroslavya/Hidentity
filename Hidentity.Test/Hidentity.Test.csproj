@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntitySubstitutorTests.cs" />
-    <Compile Include="Filter\InputParamsCatcherTests.cs" />
+    <Compile Include="Filter\When_catching_input_params.cs" />
     <Compile Include="HelperClasses\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfiguratorTests.cs" />

@@ -34,18 +34,21 @@ namespace Hidentity.Configuration
         #endregion
 
         private Hashtable _items = new Hashtable();
-        
+        private List<string> _handlingTypes = new List<string>();
+
         public void Add(Substitutable item)
         {
             var items = Find(item.TypeGuid);
-            if (items != null)
+            if (items != null){
                 items.Add(item);
+            }
             else
             {
                 var newItems = new List<Substitutable>();
                 newItems.Add(item);
 
                 _items.Add(item.TypeGuid, newItems);
+                _handlingTypes.Add(item.TypeName);
             }
         }
 
@@ -55,6 +58,11 @@ namespace Hidentity.Configuration
                 return _items[typeGuid] as List<Substitutable>;
 
             return null;
+        }
+
+        public List<string> GetAllHandlingTypes()
+        {
+            return _handlingTypes;
         }
     }
 }

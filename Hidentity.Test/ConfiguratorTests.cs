@@ -14,7 +14,9 @@ namespace Hidentity.Test
         [TestMethod]
         public void property_name_evaluated_correctly()
         {
+            //TODO: Fix the test. For some reason we have MemberName but do not have property name.
             string name = Configurator.MemberName<UserModel, int>(x => x.Id);
+            
             Assert.AreEqual(name, "Id", "Should be Id");
         }
 

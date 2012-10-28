@@ -3,6 +3,8 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
+using Hidentity.Web.Models;
+using System.Collections.Generic;
 
 namespace Hidentity.Web
 {
@@ -18,11 +20,14 @@ namespace Hidentity.Web
             return false;
         }
 
-        public ISubstitutionStrategy GetSubstitutionStrategyFor() 
+        public Type GetHandlingType(KeyValuePair<string, object> paramObj, string controller, string action) 
         {
-            //TODO: We should check configuration for available strategies. If there`s only one - use it. 
-            //if there`s more - make choice depending on configuration.
-            return new MultiplyBy10Strategy();
+            //Some smarter implementtion here. Currently we only work with UserModel and do not use configurartion at all.
+            //var hidentities = configuration.GetHidentitiesList()
+            //if(hidentities.Contain(controller))
+            // return hidentities.GetByName(controller)
+            return typeof(UserModel);
         }
+
     }
 }

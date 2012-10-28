@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Hidentity.Configuration;
 
 namespace Hidentity.Web.Filters
 {
@@ -43,12 +44,15 @@ namespace Hidentity.Web.Filters
                     //or for related type. E.g. is we are substituting int id we have to find the related substitutable type by controller and action name
                     //like for User/Add will be UserModel and we should use UserModel substitution strategy. LAter we will iterate through all the caught
                     //params and substitute them using the strategy attached.
-                    ISubstitutableParam par = new SubstitutableParam() { HandlingType = ParamCatchingPolicy.GetType(), Name = item.Key, Value = item.Value};
+                    var handlingType = ParamCatchingPolicy.GetHandlingType(item, controllerName, actionName);
+                    ISubstitutableParam par = new SubstitutableParam() { HandlingType = handlingType, Name = item.Key, Value = item.Value};
+
                     paramList.Add(par);
                 }
             }
 
             return paramList;
         }
+        
     }
 }

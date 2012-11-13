@@ -43,7 +43,9 @@
     <Compile Include="Configuration\Configurator.cs" />
     <Compile Include="Configuration\Substitutable.cs" />
     <Compile Include="Configuration\SubstitutablesRegistry.cs" />
+    <Compile Include="DefaultCatchingPolicy.cs" />
     <Compile Include="EntitySubstitutor.cs" />
+    <Compile Include="ISubstitutableCatchingPolicy.cs" />
     <Compile Include="SubstitutionStrategies\ISubstitutionStrategy.cs" />
     <Compile Include="ISubstitutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

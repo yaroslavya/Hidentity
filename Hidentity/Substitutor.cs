@@ -10,15 +10,23 @@ namespace Hidentity
     /// </summary>
     public class Substitutor : ISubstitutor
     {
+        private ISubstitutionStrategy _strategy;
+
+        public Substitutor(ISubstitutionStrategy strategy) 
+        {
+            _strategy = strategy;
+        }
+
         public int ToHiddenId(int realId) 
         {
             //TODO: switch to some other substitution methods.
-            return realId * 10;
+            return _strategy.ToHidden(realId);
+            //return realId * 10;
         }
 
         public int ToRealId(int hiddenId) 
         {
-            return hiddenId / 10;
+            return _strategy.ToReal(hiddenId);
         }
 
     }

@@ -19,6 +19,7 @@ namespace Hidentity.Configuration
             var memberExpression = expression.Body as MemberExpression;
             if (memberExpression == null)
                 throw new InvalidOperationException("Expression must be a member expression");
+
             return memberExpression.Expression.Type.Name;
             //return memberExpression.Member.Name;
         }
@@ -52,6 +53,14 @@ namespace Hidentity.Configuration
             Type type = model.GetType();
             var propToHide = Configurator.SubstitutesFor(type)[0];
 
+        }
+
+        public static SubstitutablesRegistry Substitutables()
+        {
+            //TODO: major cleanup soon.
+            Substitutable handlingType = SubstitutablesRegistry.Instance.GetHandlingType((x) => x.TypeName == "");
+
+            return null;
         }
 
     }

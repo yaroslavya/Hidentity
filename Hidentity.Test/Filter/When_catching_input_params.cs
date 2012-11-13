@@ -47,7 +47,7 @@ namespace Hidentity.Test.Filter
             var param = subsParams[0];
 
             //assert
-            Assert.AreEqual(param.HandlingType.Name, typeof(DefaultParamCatchingPolicy).Name, "Should point to default if nothing was configured.");
+            Assert.AreEqual(param.HandlingType.Name, typeof(UserModel).Name, "Should point to UserModel");
         }
 
         [TestMethod]

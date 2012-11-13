@@ -30,6 +30,20 @@ namespace Hidentity.Test
             Assert.AreEqual("Id", substitutes[0].PropertyName, "Should be Id property.");
             Assert.AreEqual("UserModel", substitutes[0].TypeName, "Should be UserModel class.");
         }
+
+        [TestMethod]
+        public void substitutable_type_can_be_searched_by_name() 
+        {
+            //arrange
+            Configurator.Substitute<UserModel, int>(x => x.Id);
+            string typeName = "UserModel";
+
+            //act
+            //Substitutable handlingType = Configurator.HandlingTypeFor(typeName);
+
+            //assert
+            //Assert.AreEqual(typeName, handlingType.TypeName, "type name should be found.");
+        }
        
     }
 }

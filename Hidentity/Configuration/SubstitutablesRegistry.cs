@@ -34,7 +34,7 @@ namespace Hidentity.Configuration
         #endregion
 
         private Hashtable _items = new Hashtable();
-        private List<string> _handlingTypes = new List<string>();
+        private List<Substitutable> _handlingTypes = new List<Substitutable>();
 
         public void Add(Substitutable item)
         {
@@ -48,7 +48,7 @@ namespace Hidentity.Configuration
                 newItems.Add(item);
 
                 _items.Add(item.TypeGuid, newItems);
-                _handlingTypes.Add(item.TypeName);
+                _handlingTypes.Add(item);
             }
         }
 
@@ -60,9 +60,9 @@ namespace Hidentity.Configuration
             return null;
         }
 
-        public List<string> GetAllHandlingTypes()
+        public Substitutable GetHandlingType(Func<Substitutable, bool> filter)
         {
-            return _handlingTypes;
+            return _handlingTypes.FirstOrDefault(filter);
         }
     }
 }

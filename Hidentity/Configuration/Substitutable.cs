@@ -13,5 +13,6 @@ namespace Hidentity.Configuration
         public string TypeName { get; set; }
         public string PropertyName { get; set; }
         public string TypeGuid { get; set; }
+        public Type HandlingType { get; set; }
     }
 }

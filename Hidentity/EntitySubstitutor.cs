@@ -38,7 +38,7 @@ namespace Hidentity
                 int hiddenVal = ReflectionHelper.GetValue<T>(entity, item);
                 var strategy = GetStrategyFor(item);
                 int realVal = strategy.ToReal(hiddenVal);
-
+                
                 ReflectionHelper.SetValue<T>(entity, item, realVal);
             }
         }
